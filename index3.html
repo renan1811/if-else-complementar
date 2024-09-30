@@ -23,16 +23,23 @@
     //PROCESSAMENTO
 
     if (salario <= 2000) {
-        porSal = salario * 0.15 ;
-        let depois = salario + depois ; 
+        porSal = salario / 100 * 15 ;
+        depois = salario + porSal ; 
     } else if (salario > 2000) {
-        porSal = salario * 0.10 ;
-        let depois = salario + depois ; 
-    } else if (salario > 4000) {
-        porSal = salario *  ;
-        let depois = salario + depois ; 
+        porSal = salario / 100 * 10 ;
+        depois = salario + porSal ; 
+    } else if (salario >= 4000) {
+        porSal = salario / 100 * 7.5 ;
+        depois = salario + porSal ; 
+    } else {
+        porSal = salario / 100 * 5 ;
+        depois = salario + porSal ;
     }
     
     //SAÍDA
+    document.write(`O valor do aumento é de ${porSal} <br> E o valor final é de ${depois} `)
+
+
+
 
 </script>
